@@ -3,12 +3,14 @@
 #include <string>
 #include "IEmployee.h"
 using namespace std;
-class Employee : public IEmployee {	
-protected:
+class Employee : public IEmployee {
+private:
 	string name;
+protected:
 	string company;
 	int age;
 public:
+	Employee();
 	void setname(string  Name);
 
 	string getname();
@@ -23,6 +25,6 @@ public:
 
 	Employee(string Name, string Company, int Age);
 		void AskForPromotion() override;
-		virtual void Work() override;
+		virtual void Work();
 };
 

@@ -4,5 +4,4 @@ class IEmployee {
 
 public:
 	virtual void AskForPromotion() = 0;
-	virtual void Work() =0 ;
 };

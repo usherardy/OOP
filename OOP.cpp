@@ -105,31 +105,41 @@ int main()
 
 	//employee1.AskForPromotion();
 
-	Developer d("C++", "BRAH", "SICK", 25);
-	d.FixBug();
-	d.AskForPromotion();
-	printf("\n");
-	printf("\n");
-	Teacher t = Teacher("Jack", "Shannon club", 35, "CS");
-	t.IntroduceYourSelf();
-	t.PrepareLesson();
-	t.AskForPromotion();
-	printf("\n");
-	printf("\n");
-	Student s = Student("Bob", "High School", 18, "Programming");
-	s.IntroduceYourSelf();
-	s.IsStudying();
-	s.AskForPromotion();
+
+	 // Insertering Developer
+	Developer d("C", "Dennis Ritchie", "Bell Labs", 89);
+	d.IntroduceYourSelf();
+	d.FixBug();				
+	d.AskForPromotion();	
+	Developer d1("Unix", "Ken Thompson", "Bell Labs", 70);
+	Developer d2 = d & d1;
+	cout << d2.getname() << " both worked on " << d2.FavProgLang << " at " << d2.getcompany() << endl;
+	printf("---------------------------------\n");
+	
+	
+	// Inserting Teacher
+	Teacher t = Teacher("Julius", "Shannons club", 30, "Computer Science");
+	t.IntroduceYourSelf();	
+	t.PrepareLesson();		
+	t.AskForPromotion();	printf("---------------------------------\n");
+	
+	// Inserting Student
+	Student s = Student("Ashar", "Vgtu", 20, "Programming", 5);
+	s.IntroduceYourSelf();	
+	s.IsStudying();			
+	s.AskForPromotion();	
+
+	Student s1("Shakir", "Stanford", 21, " Maths",8);
+	Student s2= s + s1;
+	cout <<s2.getname() << " are learning " << s2.Sub << " and their Combined Grade is " << s2.grade << endl;
+	printf("---------------------------------\n");
 
 
 	//Polymorphism
-	printf("\n");
 	Employee* e1 = &d;
 	Employee* e2 = &t;
 	Employee* e3 = &s;
 	e1->Work();
-	
 	e2->Work();
-	printf("\n");
 	e3->Work();
 }
