@@ -6,7 +6,7 @@
 
 
 class Student : public Employee {
-public:
+private:
 	string Sub;
 	int grade;
 public:
